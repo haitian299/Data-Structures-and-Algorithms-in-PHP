@@ -5,7 +5,6 @@
  * Date: 16/4/26
  * Time: 09:40
  */
-require_once "Node.php";
 
 class BinarySearchTree
 {

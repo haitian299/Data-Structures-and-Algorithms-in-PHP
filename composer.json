@@ -1,0 +1,17 @@
+{
+    "name": "haitian/data-structures-and-algorithms-in-php",
+    "description": "Classic algorithms and data structures implemented in PHP.",
+    "authors": [
+        {
+            "name": "haitian",
+            "email": "haitian299@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.3.*"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
