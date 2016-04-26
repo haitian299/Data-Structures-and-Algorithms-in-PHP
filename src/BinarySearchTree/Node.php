@@ -12,7 +12,7 @@ class Node
     public    $right;
     public    $parent;
 
-    public function __construct($value = null)
+    public function __construct($value)
     {
         $this->value = $value;
     }
