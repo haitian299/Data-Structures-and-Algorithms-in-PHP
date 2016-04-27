@@ -6,10 +6,10 @@ Classic algorithms and data structures implemented in PHP.
 
 #### Data Structures
 
-* [Binary Search Tree](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/BinarySearchTree) [(wiki)](http://en.wikipedia.org/wiki/Binary_tree)
+* [Binary Search Tree](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/BinarySearchTree) [(wiki)](http://en.wikipedia.org/wiki/Binary_tree)
 * Graph [(wiki)](http://en.wikipedia.org/wiki/Graph_%28abstract_data_type)
 * Hash Tables [(wiki)](http://en.wikipedia.org/wiki/Hash_table)
-* Linked List [(wiki)](http://en.wikipedia.org/wiki/Linked_list)
+* [Linked List](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/LinkedList) [(wiki)](http://en.wikipedia.org/wiki/Linked_list)
 * Matrix [(wiki)](http://en.wikipedia.org/wiki/Matrix_(mathematics))
 * Min/Max Heap [(wiki)](http://en.wikipedia.org/wiki/Heap_%28data_structure%29)
 * Priority Queue [(wiki)](http://en.wikipedia.org/wiki/Priority_queue)
