@@ -29,7 +29,7 @@ class BinarySearchTree
         $node = new Node($value);
         if (is_null($this->head)) {
             $this->head = $node;
-            $this->size = $this->size + 1;
+            $this->size++;
 
             return $this;
         }
@@ -56,7 +56,7 @@ class BinarySearchTree
             }
         }
 
-        $this->size = $this->size + 1;
+        $this->size++;
 
         return $this;
     }
@@ -114,7 +114,7 @@ class BinarySearchTree
                                 $subTree->insert($node->getValue());
                             });
                         }
-                        $this->size = $this->size - 1;
+                        $this->size--;
 
                         return true;
                     }
@@ -123,13 +123,13 @@ class BinarySearchTree
                         $head->left = $head->right->left;
                         $head->right = $head->right->right;
 
-                        $this->size = $this->size - 1;
+                        $this->size--;
 
                         return true;
                     }
                     if (is_null($parent)) {
                         $this->head = null;
-                        $this->size = $this->size - 1;
+                        $this->size--;
 
                         return true;
                     }
@@ -140,7 +140,7 @@ class BinarySearchTree
                         $parent->right = null;
                     }
 
-                    $this->size = $this->size - 1;
+                    $this->size--;
 
                     return true;
             }
