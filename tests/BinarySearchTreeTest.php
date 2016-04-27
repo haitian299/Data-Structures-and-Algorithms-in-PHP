@@ -20,16 +20,19 @@ class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
 
         $tree = new \BinarySearchTree\BinarySearchTree($node);
 
+        //test insert
         $tree->insert(4)->insert(2)->insert(5)->insert(3)->insert(6);
 
         $this->assertEquals(6, $tree->getSize());
 
+        //test search
         $five = $tree->search(5);
         $this->assertEquals(5, $five->getValue());
         $this->assertEquals(4, $five->parent->getValue());
         $this->assertEquals(6, $five->right->getValue());
         $this->assertNull($five->left);
 
+        //test delete
         $tree->delete(5);
         $this->assertEquals(5, $tree->getSize());
 
