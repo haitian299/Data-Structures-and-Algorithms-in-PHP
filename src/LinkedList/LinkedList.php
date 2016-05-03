@@ -163,9 +163,13 @@ class LinkedList
 
     public function map(callable $callback)
     {
-        for ($node = $this->head; !is_null($node); $node = $node->next) {
-            $callback($node);
+        for ($node = $this->head, $list = new LinkedList(); !is_null($node); $node = $node->next) {
+            $tmp = clone $node;
+            $callback($tmp);
+            $list->append($tmp->value);
         }
+
+        return $list;
     }
 
     public function clear()
@@ -185,5 +189,12 @@ class LinkedList
         $this->length += $list->getLength();
 
         return $this;
+    }
+
+    public function each(callable $callback)
+    {
+        for ($node = $this->head; !is_null($node); $node = $node->next) {
+            $callback($node);
+        }
     }
 }
