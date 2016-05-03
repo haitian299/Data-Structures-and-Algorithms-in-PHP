@@ -104,14 +104,14 @@ class BinarySearchTree
                 case 0:
                     if (!is_null($head->left)) {
                         $right = $head->right;
-                        $head->setValue($head->left->getValue());
+                        $head->value = $head->left->value;
                         $head->left = $head->left->left;
                         $head->right = $head->left->right;
 
                         if (!is_null($right)) {
                             $subTree = new BinarySearchTree($head);
                             $this->iterOnTree($right, function (Node $node) use ($subTree) {
-                                $subTree->insert($node->getValue());
+                                $subTree->insert($node->value);
                             });
                         }
                         $this->size--;
@@ -119,7 +119,7 @@ class BinarySearchTree
                         return true;
                     }
                     if (!is_null($head->right)) {
-                        $head->setValue($head->right->getValue());
+                        $head->value = $head->right->value;
                         $head->left = $head->right->left;
                         $head->right = $head->right->right;
 

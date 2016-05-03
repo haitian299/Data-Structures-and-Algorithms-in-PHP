@@ -7,10 +7,10 @@
  */
 class Node
 {
-    protected $value;
-    public    $left;
-    public    $right;
-    public    $parent;
+    public $value;
+    public $left;
+    public $right;
+    public $parent;
 
     public function __construct($value)
     {
@@ -26,17 +26,5 @@ class Node
         } else {
             return 0;
         }
-    }
-
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    public function setValue($value)
-    {
-        $this->value = $value;
-
-        return $this;
     }
 }

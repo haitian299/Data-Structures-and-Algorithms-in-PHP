@@ -8,24 +8,12 @@
 
 class Node
 {
-    protected $value;
-    public    $prev;
-    public    $next;
+    public $value;
+    public $prev;
+    public $next;
 
     public function __construct($value)
     {
         $this->value = $value;
-    }
-
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    public function setValue($value)
-    {
-        $this->value = $value;
-
-        return $this;
     }
 }

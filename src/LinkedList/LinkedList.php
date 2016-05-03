@@ -148,7 +148,7 @@ class LinkedList
         }
 
         for ($index = 0, $found = -1, $node = $this->head; !is_null($node); $node = $node->next, $index++) {
-            if ($node->getValue() === $value) {
+            if ($node->value === $value) {
                 $found = $node;
                 break;
             }
