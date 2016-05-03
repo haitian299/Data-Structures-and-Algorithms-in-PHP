@@ -166,8 +166,6 @@ class LinkedList
         for ($node = $this->head; !is_null($node); $node = $node->next) {
             $callback($node);
         }
-
-        return $this;
     }
 
     public function clear()
@@ -187,12 +185,5 @@ class LinkedList
         $this->length += $list->getLength();
 
         return $this;
-    }
-
-    public function each(callable $callback)
-    {
-        for ($node = $this->head; !is_null($node); $node = $node->next) {
-            $callback($node);
-        }
     }
 }
