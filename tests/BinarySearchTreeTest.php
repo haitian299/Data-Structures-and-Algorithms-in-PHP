@@ -27,9 +27,9 @@ class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
 
         //test search
         $five = $tree->search(5);
-        $this->assertEquals(5, $five->getValue());
-        $this->assertEquals(4, $five->parent->getValue());
-        $this->assertEquals(6, $five->right->getValue());
+        $this->assertEquals(5, $five->value);
+        $this->assertEquals(4, $five->parent->value);
+        $this->assertEquals(6, $five->right->value);
         $this->assertNull($five->left);
 
         //test delete
@@ -37,8 +37,8 @@ class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(5, $tree->getSize());
 
         $four = $tree->search(4);
-        $this->assertEquals(1, $four->parent->getValue());
-        $this->assertEquals(6, $four->right->getValue());
-        $this->assertEquals(2, $four->left->getValue());
+        $this->assertEquals(1, $four->parent->value);
+        $this->assertEquals(6, $four->right->value);
+        $this->assertEquals(2, $four->left->value);
     }
 }

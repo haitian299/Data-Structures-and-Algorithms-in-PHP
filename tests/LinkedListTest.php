@@ -15,9 +15,9 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         //test prepend and get
         $list->prepend(1)->prepend(2)->prepend(3);
 
-        $zero = $list->get(0)->getValue();
-        $one = $list->get(1)->getValue();
-        $two = $list->get(2)->getValue();
+        $zero = $list->get(0)->value;
+        $one = $list->get(1)->value;
+        $two = $list->get(2)->value;
 
         $this->assertEquals(3, $zero);
         $this->assertEquals(2, $one);
@@ -28,9 +28,9 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         //test append
         $anotherList->append(1)->append(2)->append(3);
 
-        $zero = $anotherList->get(0)->getValue();
-        $one = $anotherList->get(1)->getValue();
-        $two = $anotherList->get(2)->getValue();
+        $zero = $anotherList->get(0)->value;
+        $one = $anotherList->get(1)->value;
+        $two = $anotherList->get(2)->value;
 
         $this->assertEquals(1, $zero);
         $this->assertEquals(2, $one);
@@ -39,9 +39,9 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         //test add
         $anotherList->add(8, 1);
 
-        $zero = $anotherList->get(0)->getValue();
-        $one = $anotherList->get(1)->getValue();
-        $two = $anotherList->get(2)->getValue();
+        $zero = $anotherList->get(0)->value;
+        $one = $anotherList->get(1)->value;
+        $two = $anotherList->get(2)->value;
 
         $this->assertEquals(1, $zero);
         $this->assertEquals(8, $one);
@@ -56,7 +56,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         //test map
         $callback = function (\LinkedList\Node $node) use (&$count) {
-            $count += $node->getValue();
+            $count += $node->value;
         };
 
         $list->map($callback);
@@ -65,9 +65,9 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         //test find
         $node = $list->find(1);
-        $this->assertEquals(1, $node->getValue());
-        $this->assertEquals(2, $node->prev->getValue());
-        $this->assertEquals(1, $node->next->getValue());
+        $this->assertEquals(1, $node->value);
+        $this->assertEquals(2, $node->prev->value);
+        $this->assertEquals(1, $node->next->value);
 
         //test remove
         $list->remove(8);
