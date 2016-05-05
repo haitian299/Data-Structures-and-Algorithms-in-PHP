@@ -1,10 +1,5 @@
 <?php namespace BinarySearchTree;
-/**
- * Created by PhpStorm.
- * User: haitian
- * Date: 16/4/26
- * Time: 09:43
- */
+
 class Node
 {
     public $value;

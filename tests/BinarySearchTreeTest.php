@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: haitian
- * Date: 16/4/26
- * Time: 22:17
- */
 class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
 {
     public function test()

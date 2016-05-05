@@ -1,10 +1,4 @@
 <?php namespace LinkedList;
-/**
- * Created by PhpStorm.
- * User: haitian
- * Date: 16/4/26
- * Time: 21:15
- */
 
 class LinkedList
 {

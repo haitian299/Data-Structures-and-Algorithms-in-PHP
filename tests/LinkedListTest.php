@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: haitian
- * Date: 16/4/27
- * Time: 15:10
- */
 class LinkedListTest extends PHPUnit_Framework_TestCase
 {
     public function test()
