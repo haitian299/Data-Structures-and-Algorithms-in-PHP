@@ -1,10 +1,13 @@
-<?php
+<?php namespace tests;
 
-class LinkedListTest extends PHPUnit_Framework_TestCase
+use LinkedList\LinkedList;
+use LinkedList\Node;
+
+class LinkedListTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $list = new \LinkedList\LinkedList();
+        $list = new LinkedList();
 
         //test prepend and get
         $list->prepend(1)->prepend(2)->prepend(3);
@@ -17,7 +20,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(2, $one);
         $this->assertEquals(1, $two);
 
-        $anotherList = new \LinkedList\LinkedList();
+        $anotherList = new LinkedList();
 
         //test append
         $anotherList->append(1)->append(2)->append(3);
@@ -49,7 +52,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $count = 0;
 
         //test map
-        $callback = function (\LinkedList\Node $node) use (&$count) {
+        $callback = function (Node $node) use (&$count) {
             $count += $node->value;
         };
 

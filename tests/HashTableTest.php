@@ -1,10 +1,13 @@
-<?php
+<?php namespace tests;
+
+use HashTable\HashTable;
+use HashTable\Item;
 
 class HashTableTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $hashTable = new \HashTable\HashTable(1000);
+        $hashTable = new HashTable(1000);
         $hashTable->put("foo", "bar")
             ->put("fiz", "buzz")
             ->put("bruce", "wayne")
@@ -30,7 +33,7 @@ class HashTableTest extends \PHPUnit_Framework_TestCase
 
         //test each
         $count = 0;
-        $callback = function (\HashTable\Item $item) use (&$count) {
+        $callback = function (Item $item) use (&$count) {
             $count++;
         };
 

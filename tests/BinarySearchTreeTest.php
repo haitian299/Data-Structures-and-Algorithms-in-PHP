@@ -1,18 +1,21 @@
-<?php
+<?php namespace tests;
 
-class BinarySearchTreeTest extends PHPUnit_Framework_TestCase
+use BinarySearchTree\BinarySearchTree;
+use BinarySearchTree\Node;
+
+class BinarySearchTreeTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $node = new \BinarySearchTree\Node(1);
-        $anotherNode = new \BinarySearchTree\Node(2);
+        $node = new Node(1);
+        $anotherNode = new Node(2);
 
         //test compare
         $this->assertEquals(-1, $node->compare($anotherNode));
         $this->assertEquals(1, $anotherNode->compare($node));
         $this->assertEquals(0, $node->compare($node));
 
-        $tree = new \BinarySearchTree\BinarySearchTree($node);
+        $tree = new BinarySearchTree($node);
 
         //test insert
         $tree->insert(4)->insert(2)->insert(5)->insert(3)->insert(6);
