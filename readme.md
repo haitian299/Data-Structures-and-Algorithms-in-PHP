@@ -13,7 +13,7 @@ Classic algorithms and data structures implemented in PHP.
 * Matrix [(wiki)](http://en.wikipedia.org/wiki/Matrix_(mathematics))
 * [Min/Max Heap](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Heap) [(wiki)](http://en.wikipedia.org/wiki/Heap_%28data_structure%29)
 * Priority Queue [(wiki)](http://en.wikipedia.org/wiki/Priority_queue)
-* Queue [(wiki)](http://en.wikipedia.org/wiki/Queue_%28abstract_data_type%29)
+* [Queue](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Queue) [(wiki)](http://en.wikipedia.org/wiki/Queue_%28abstract_data_type%29)
 * [Stack](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Stack) [(wiki)](http://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29)
 
 #### Graph algorithms
