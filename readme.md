@@ -51,7 +51,7 @@ Classic algorithms and data structures implemented in PHP.
 
 * Bubble Sort [(wiki)](http://en.wikipedia.org/wiki/Bubble_sort)
 * Heap Sort [(wiki)](http://en.wikipedia.org/wiki/Heapsort)
-* Quick Sort [(wiki)](http://en.wikipedia.org/wiki/Quicksort)
+* [Quick Sort](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Algorithms/Sorting/QuickSort) [(wiki)](http://en.wikipedia.org/wiki/Quicksort)
 * Merge Sort [(wiki)](http://en.wikipedia.org/wiki/Merge_sort)
 * Insertion Sort [(wiki)](http://en.wikipedia.org/wiki/Insertion_sort)
 * Shell Sort [(wiki)](http://en.wikipedia.org/wiki/Shellsort)
