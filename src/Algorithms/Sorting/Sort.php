@@ -2,6 +2,6 @@
 
 class Sort
 {
-    use QuickSort;
+    use QuickSort, MergeSort;
 }
 
