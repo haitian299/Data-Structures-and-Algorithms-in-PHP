@@ -15,21 +15,31 @@ class SortTest extends \PHPUnit_Framework_TestCase
 
     public function testQuickSort()
     {
-        $list = $this->getShuffledArray(100);
+        $list = $this->getShuffledArray(1000);
 
-        $sorted = Sort::quickSort($list);
-        for ($i = 0; $i < count($sorted) - 1; $i++) {
-            $this->assertTrue($sorted[$i] < $sorted[$i + 1]);
+        Sort::quickSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
         }
     }
 
     public function testMergeSort()
     {
-        $list = $this->getShuffledArray(100);
+        $list = $this->getShuffledArray(1000);
 
-        $sorted = Sort::mergeSort($list);
-        for ($i = 0; $i < count($sorted) - 1; $i++) {
-            $this->assertTrue($sorted[$i] < $sorted[$i + 1]);
+        Sort::mergeSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
+        }
+    }
+
+    public function testInsertionSort()
+    {
+        $list = $this->getShuffledArray(1000);
+
+        Sort::insertionSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
         }
     }
 }

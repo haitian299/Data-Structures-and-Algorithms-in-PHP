@@ -2,9 +2,11 @@
 
 trait QuickSort
 {
-    public static function quickSort(array $array)
+    public static function quickSort(array &$array)
     {
-        return static::recurse($array, 0, count($array) - 1);
+        static::quickSortRecursive($array, 0, count($array) - 1);
+
+        return true;
     }
 
     private static function partition(&$array, $left, $right)
@@ -22,14 +24,12 @@ trait QuickSort
         return $left;
     }
 
-    private static function recurse(&$array, $left, $right)
+    private static function quickSortRecursive(&$array, $left, $right)
     {
         if ($left < $right) {
             $pivot = static::partition($array, $left, $right);
-            $array = static::recurse($array, $left, $pivot - 1);
-            $array = static::recurse($array, $pivot + 1, $right);
+            static::quickSortRecursive($array, $left, $pivot - 1);
+            static::quickSortRecursive($array, $pivot + 1, $right);
         }
-
-        return $array;
     }
 }

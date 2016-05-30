@@ -2,25 +2,35 @@
 
 trait MergeSort
 {
-    public static function mergeSort(array $array)
+    public static function mergeSort(array &$array)
     {
         $length = count($array);
         if ($length < 2) {
-            return $array;
+            return true;
         }
 
-        $part1 = static::mergeSort(array_slice($array, 0, $length >> 1));
-        $part2 = static::mergeSort(array_slice($array, $length >> 1));
-
+        $mid = $length >> 1;
+        $part1 = array_slice($array, 0, $mid);
+        $part2 = array_slice($array, $mid);
+        static::mergeSort($part1);
+        static::mergeSort($part2);
         if (end($part1) <= $part2[0]) {
-            return array_merge($part1, $part2);
+            $array = array_merge($part1, $part2);
+        } else {
+            for ($i = 0, $j = 0, $k = 0; $k <= $length - 1; $k++) {
+                if ($i >= $mid && $j < $length - $mid) {
+                    $array[$k] = $part2[$j++];
+                } elseif ($j >= $length - $mid && $i < $mid) {
+                    $array[$k] = $part1[$i++];
+                } elseif ($part1[$i] <= $part2[$j]) {
+                    $array[$k] = $part1[$i++];
+                } else {
+                    $array[$k] = $part2[$j++];
+                }
+            }
         }
 
-        while (!empty($part1) && !empty($part2)) {
-            $sorted[] = $part1[0] < $part2[0] ? array_shift($part1) : array_shift($part2);
-        }
-
-        return array_merge($sorted, $part1, $part2);
+        return true;
     }
 }
 
