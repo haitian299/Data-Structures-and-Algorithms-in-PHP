@@ -6,6 +6,7 @@ class Sort
         MergeSort,
         InsertionSort,
         BubbleSort,
-        HeapSort;
+        HeapSort,
+        SelectionSort;
 }
 

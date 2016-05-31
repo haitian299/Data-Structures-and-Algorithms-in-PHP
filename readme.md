@@ -55,7 +55,7 @@ Classic algorithms and data structures implemented in PHP.
 * [Merge Sort](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Algorithms/Sorting/MergeSort) [(wiki)](http://en.wikipedia.org/wiki/Merge_sort)
 * [Insertion Sort](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Algorithms/Sorting/InsertionSort) [(wiki)](http://en.wikipedia.org/wiki/Insertion_sort)
 * Shell Sort [(wiki)](http://en.wikipedia.org/wiki/Shellsort)
-* Selection Sort [(wiki)](http://en.wikipedia.org/wiki/Selection_sort)
+* [Selection Sort](https://github.com/haitian299/Data-Structures-and-Algorithms-in-PHP/tree/master/src/Algorithms/Sorting/SelectionSort) [(wiki)](http://en.wikipedia.org/wiki/Selection_sort)
 
 #### Searching algorithms
 

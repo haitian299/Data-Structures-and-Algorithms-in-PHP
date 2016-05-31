@@ -62,4 +62,14 @@ class SortTest extends \PHPUnit_Framework_TestCase
             $this->assertTrue($list[$i] < $list[$i + 1]);
         }
     }
+
+    public function testSelectionSort()
+    {
+        $list = $this->getShuffledArray(1000);
+
+        Sort::selectionSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
+        }
+    }
 }
