@@ -7,6 +7,7 @@ class Sort
         InsertionSort,
         BubbleSort,
         HeapSort,
-        SelectionSort;
+        SelectionSort,
+        ShellSort;
 }
 
