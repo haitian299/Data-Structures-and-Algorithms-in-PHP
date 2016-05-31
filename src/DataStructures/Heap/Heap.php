@@ -50,7 +50,7 @@ class Heap
     protected function siftUp()
     {
         for ($i = $this->length() - 1, $parent = $this->length() - 1; $i > 0; $i = $parent) {
-            $parent = $i >> 1;
+            $parent = ($i - 1) >> 1;
             if ($this->less($this->get($i), $this->get($parent))) {
                 list($this->data[$parent], $this->data[$i]) = [$this->get($i), $this->get($parent)];
             } else {
