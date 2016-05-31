@@ -42,4 +42,14 @@ class SortTest extends \PHPUnit_Framework_TestCase
             $this->assertTrue($list[$i] < $list[$i + 1]);
         }
     }
+
+    public function testBubbleSort()
+    {
+        $list = $this->getShuffledArray(10000);
+
+        Sort::bubbleSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
+        }
+    }
 }
