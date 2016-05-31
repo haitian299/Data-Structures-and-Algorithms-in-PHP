@@ -2,6 +2,10 @@
 
 class Sort
 {
-    use QuickSort, MergeSort, InsertionSort, BubbleSort;
+    use QuickSort,
+        MergeSort,
+        InsertionSort,
+        BubbleSort,
+        HeapSort;
 }
 

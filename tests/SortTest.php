@@ -45,9 +45,19 @@ class SortTest extends \PHPUnit_Framework_TestCase
 
     public function testBubbleSort()
     {
-        $list = $this->getShuffledArray(10000);
+        $list = $this->getShuffledArray(1000);
 
         Sort::bubbleSort($list);
+        for ($i = 0; $i < count($list) - 1; $i++) {
+            $this->assertTrue($list[$i] < $list[$i + 1]);
+        }
+    }
+
+    public function testHeapSort()
+    {
+        $list = $this->getShuffledArray(1000);
+
+        Sort::heapSort($list);
         for ($i = 0; $i < count($list) - 1; $i++) {
             $this->assertTrue($list[$i] < $list[$i + 1]);
         }
